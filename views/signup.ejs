@@ -1,0 +1,170 @@
+<!DOCTYPE html>    
+<html>
+<head>
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>SignUp form</title>
+    <style>
+    body
+	{
+		margin: 0;
+		padding: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		background-color: #ADD8E6;
+	}
+
+	* {box-sizing: border-box;}
+
+	.login
+	{
+		width: 500px;
+		margin: 20 0 0 40px;
+		padding: 50px;
+		background: #ADD8E6;
+		overflow: hidden;
+		border: 2px solid blue;
+		border-radius: 15px;
+		left: 50%;
+		top: 50%;
+		position: absolute;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+    	-moz-transform: translate3d(-50%, -50%, 0);
+    	transform: translate3d(-50%, -50%, 0);
+	}
+
+	h2
+	{
+		color: black;
+		padding: 20px;
+		text-align: center;
+	}
+	
+	label
+	{
+		font-size: 18px;
+		color: black;
+		font-weight: bold;
+	}
+	
+	#input
+	{
+		width: 100%;
+		height: 35px;
+		border: none;
+		padding-left: 18px;
+	}
+
+	#signup
+	{  
+		width: 100%;
+		height: 30px;
+		border: none;
+		border-radius: 17px;
+		padding-left: 7px;
+		color: blue;
+		font-weight: 900;
+	}
+	
+	a
+	{
+		color: #4169E1;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 15px;
+	}
+	
+	.input-container
+	{
+		display: -ms-flexbox;
+		display: flex;
+		width: 100%;
+		margin-bottom: 15 px;
+	}
+	
+	.icon
+	{
+		padding: 10px;
+		background: green;
+		color: white;
+		min-width: 20px;
+		text-align: center;
+	}
+	</style>
+	
+</head>
+
+<body>
+    <form class = "login">
+    	<center> <h2> Create your account </h2> </center>
+    	
+		<label> Firstname: </label>
+		<div class = "input-container">
+			<input type = "text" name = "firstname" id = "input" placeholder = "firstname" required>
+		</div>
+	
+		<br>
+	
+		<label> Lastname: </label>
+		<div class = "input-container">
+			<input type = "text" name = "lastname" id = "input" placeholder = "lastname" />
+		</div>
+		<br>
+		
+		<label> Phone: </label>
+		<div class = "input-container">
+			<input type = "text" name = "ccode"  placeholder = "Country Code" value = "+91" size = "2"/>
+			<input type = "text" name = "phone" id = "input" placeholder = "enter phone no." size = "10"/ required>
+		</div>
+		
+		<br>
+	
+		<label> Address: </label>
+		<div class = "input-container">
+			<textarea cols = "54" rows = "5" placeholder = "enter address" value = "address" required> </textarea>
+		</div>
+		
+		<br>
+		
+		<label> Gender: </label>
+		<input type = "radio" value = "Male" name = gender" checked> Male
+		<input type = "radio" value = "Female" name = gender"> Female
+		<input type = "radio" value = "Other" name = gender"> Other
+		
+		<br><br>
+		
+    	<label> Email: </label>
+    	<div class = "input-container">
+			<i class = "fa fa-envelope icon"></i>
+			<input type="email" name="Email" id="input" placeholder="email" required>
+		</div>
+		
+		<br>
+		
+		<label> Password: </label>
+		<div class = "input-container">
+			<i class = "fa fa-key icon"></i>
+			<input type="Password" name="Pass" id="input" placeholder="password" required>
+		</div>
+		
+		<br>
+		
+		<label> Confirm Password: </label>
+		<div class = "input-container">
+			<i class = "fa fa-key icon"></i>
+			<input type="Password" name="Pass" id="input" placeholder="password" required>
+		</div>
+		
+		<br>
+		
+		<input type="checkbox"> Save login
+		
+		<br><br>
+		
+	    <b> <button type="submit" id="signup"> Sign up </button> </b>
+	    
+	    <br><br>
+	    
+		<center> Already have account? <a href = "/login"> Sign in here! </a> </center>
+	</form>
+</body> 
+</html>
