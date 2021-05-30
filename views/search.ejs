@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Flats</title>
+    <style>
+        body
+        {
+            margin: 10px;
+            padding: 10px;
+            color: white;
+            font-family: sans-serif;
+            background-color: rgb(45, 45, 45);
+        }
+    </style>
+    
+	<script>
+		var stateObject = {
+			"Bihar": {
+				"Patna": ["Bihta", "Patna", "Rajendranagar"],
+				"Nawada": ["Nawada"],
+				"Siwan": ["Tarwara", "Jagdishpur", "Siwan"],
+				"Saran": ["Chapra"],
+				"Jamui": ["Jamui"],
+				"Bhojpur": ["Ara"],
+				"East Champaran": ["Motihari"],
+				"Madhubani": ["Madhubani"]
+			},
+			"Kerala": {
+				"Palakkad": ["Palakkad"]
+			},
+			"UP": {
+				"Banaras": ["Banaras"]
+			},
+			"Jharkhand": {
+				"Dhanbad": ["Dhanbad"],
+				"Ranchi": ["Ranchi"]
+			}
+		}
+		
+		window.onload = function() {
+			var stateSel = document.getElementById("state");
+			var distSel = document.getElementById("district");
+			var citySel = document.getElementById("city");
+			
+			for (var x in stateObject) {
+				stateSel.options[stateSel.options.length] = new Option(x, x);
+			}
+			stateSel.onchange = function() {
+				citySel.length = 1;
+				distSel.length = 1;
+				
+				for (var y in stateObject[this.value]) {
+					distSel.options[distSel.options.length] = new Option(y, y);
+				}
+			}
+			distSel.onchange = function() {
+				citySel.length = 1;
+				var z = stateObject[stateSel.value][this.value];
+				for (var i = 0; i < z.length; i++) {
+					citySel.options[citySel.options.length] = new Option(z[i], z[i]);
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+    <h2> Search for Flats </h2>
+    <form method="post" action="/searching">  
+    	<select name="State" id="state" required>
+    		<option value="" selected="selected">Select state</option>
+    	</select>
+        <br><br>
+        <select name="District" id="district" required>
+    		<option value="" selected="selected">Select district</option>
+    	</select>
+        <br><br>
+        <select name="City" id="city" required>
+    		<option value="" selected="selected">Select city</option>
+    	</select>
+        <br><br>
+        <select name="NoOfBedroom" id="bed" required>
+            <option value="" selected="selected">Select Type</option>
+            <option value=1>1 Bedroom</option>
+            <option value=2>2 Bedroom</option>
+            <option value=3>3 Bedroom</option>
+        </select>
+        <br><br>
+        <select name="Flooring" id="floor" required>
+            <option value="" selected="selected">Select Flooring</option>
+            <option value="Tiled">Tiled</option>
+            <option value="Marbled">Marbled</option>
+            <option value="Cemented">Cemented</option>
+        </select>
+        <br><br>
+        <select name="Price" id="price" required>
+			<option value="" selected="selected">Select Price Range (in lacks)</option>
+            <option value="10">Below 10</option>
+            <option value="25">10-25</option>
+            <option value="50">25-50</option>
+            <option value="100">50-100</option>
+            <option value="101">Greater than 100</option>
+        </select>
+        <br><br>
+        <select name="YearOfContract">
+            <option value="" selected="selected">Select Contract</option>
+            <option value=5>5 Years</option>
+            <option value=10>10 Years</option>
+            <option value=25>25 Years</option>
+            <option value=49>49 Years</option>
+            <option value=99>99 Years</option>
+        </select>
+        <br><br><br>
+
+        <input type="submit" value="Search">
+    </form>
+
+    <br><br>
+
+</body>
+
+</html>
