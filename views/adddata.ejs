@@ -22,7 +22,7 @@
 <body>
     <h2> Enter Flat Details </h2>
     <form method="post" action="/details/add">
-        <input type="text" name="name" placeholder="enter flat name">
+        <input type="text" name="Name" placeholder="enter flat name">
         <br><br>
         <input type="text" name="FID" placeholder="enter flat id">
         <br><br>
@@ -34,61 +34,61 @@
         <br><br>
         <input type="text" name="State" placeholder="enter state">
         <br><br>
-        <select name="Type">
+        <select name="NoOfBedroom">
             <option>Select Type</option>
-            <option value="1 Bedroom">1 Bedroom</option>
-            <option value="2 Bedroom">2 Bedroom</option>
-            <option value="3 Bedroom">3 Bedroom</option>
+            <option value=1>1 Bedroom</option>
+            <option value=2>2 Bedroom</option>
+            <option value=3>3 Bedroom</option>
         </select>
         <br><br>
         <select name="DrawingRoom">
             <option>Drawing Room</option>
-            <option value="Y">Yes</option>
-            <option value="N">No</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
         </select>
         <br><br>
         <select name="DiningRoom">
             <option>Dining Room</option>
-            <option value="Y">Yes</option>
-            <option value="N">No</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
         </select>
         <br><br>
         <select name="LaundryRoom">
             <option>Laundry Room</option>
-            <option value="Y">Yes</option>
-            <option value="N">No</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
         </select>
         <br><br>
         <select name="Kitchen">
             <option>Select Kitchens</option>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="2">3</option>
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=2>3</option>
         </select>
         <br><br>
         <select name="AttachedBathroom">
             <option>Attached Bathroom</option>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="2">3</option>
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
         </select>
         <br><br>
         <select name="SharedBathroom">
             <option>Shared Bathroom</option>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="2">3</option>
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
         </select>
         <br><br>
         <select name="Balcony">
             <option>Select Balcony</option>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="2">3</option>
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
         </select>
         <br><br>
         <select name="Flooring">
@@ -98,25 +98,33 @@
             <option value="Cemented">Cemented</option>
         </select>
         <br><br>
-        <input type="text" name="MaxIntakes" placeholder="max. no. of intakes">
+        <input type="number" name="MaxIntakes" placeholder="max. no. of intakes">
         <br><br>
         <select name="Furnished">
             <option>Furnished</option>
-            <option value="Y">Yes</option>
-            <option value="N">No</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
         </select>
         <br><br>
         <select name="YearOfContract">
             <option>Select Contract</option>
-            <option value="5">5 Years</option>
-            <option value="10">10 Years</option>
-            <option value="25">25 Years</option>
-            <option value="49">49 Years</option>
-            <option value="99">99 Years</option>
+            <option value=5>5 Years</option>
+            <option value=10>10 Years</option>
+            <option value=25>25 Years</option>
+            <option value=49>49 Years</option>
+            <option value=99>99 Years</option>
         </select>
         <br><br>
-        <input type="text" name="Price" placeholder="enter price (in lacks)">
-
+        <input type="number" name="Price" placeholder="enter price (in lacks)">
+		<br><br>
+		<select name="Popularity">
+            <option>Select Popularity</option>
+            <option value=0>0</option>
+        </select>
+        <br><br>
+        <input type="number" name="CarpetArea" placeholder="enter area (in sq. ft)">
+        <br><br>
+        <input type="number" name="AgeOfFlat" placeholder="enter flat age (in years)">
         <br><br><br>
 
         <input type="submit" value="Submit">

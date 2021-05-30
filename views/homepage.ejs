@@ -141,7 +141,8 @@
 					<div class="others">District : <%= flat.district %></div>
 					<div class=others>Year Of Contract : <%= flat.yoc %> years</div>
 					<div class=others>Price : Rs <%= flat.price %> lakhs</div>
-					<div> <a class="link" href="/search/particular/<%= flat.FID %>"> See Full Details</a> </div>
+					<div> <a class="link" href="/search/particular/?<%= flat.FID %>"> See Full Details</a> </div>
+					<!-- <div> <a class="link" href="/search/particular/"> See Full Details</a> </div> -->
 				</div>
 				<% }) %>
 		</div>
